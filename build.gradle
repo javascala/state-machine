@@ -1,0 +1,21 @@
+group 'spring'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+version =  '0.1.0'
+archivesBaseName = 'gs-statemachine'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url "http://repo.spring.io/libs-release" }
+    maven { url "http://repo.spring.io/libs-milestone" }
+    maven { url "http://repo.spring.io/libs-snapshot" }
+}
+
+dependencies {
+    compile("org.springframework.statemachine:spring-statemachine-core:1.2.5.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter:1.2.5.RELEASE")
+}
